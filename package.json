@@ -13,11 +13,13 @@
     "babel": "inherit"
   },
   "scripts": {
-    "cover": "nyc --reporter=lcov --reporter=text --reporter=html npm run test",
     "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+    "cover": "nyc --reporter=lcov --reporter=text --reporter=html npm run test",
+    "docs": "static-react docs/Root.js > index.html",
     "test": "ava 'src/**/*/test.js' --verbose --require ./other/setup-ava-tests.js",
-    "watch:test": "nodemon --quiet --watch app --exec npm run test -s",
-    "watch:cover": "nodemon --quiet --watch app --exec npm run cover -s"
+    "watch:cover": "nodemon --quiet --watch src --exec npm run cover -s",
+    "watch:docs": "nodemon --quiet --watch src --watch docs --exec npm run docs -s",
+    "watch:test": "nodemon --quiet --watch src --exec npm run test -s"
   },
   "repository": "tachyons-react/tachyons-react",
   "keywords": [],
@@ -36,7 +38,8 @@
     "react": "0.14.7",
     "react-addons-test-utils": "0.14.7",
     "react-dom": "0.14.7",
-    "sinon": "1.17.3"
+    "sinon": "1.17.3",
+    "static-react": "^3.1.0"
   },
   "dependencies": {
     "tachyons": "^4.0.0-beta.10"
