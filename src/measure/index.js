@@ -1,15 +1,10 @@
 import React, { PropTypes } from 'react'
-import scaleConversion from '../../util/scale-conversion'
+import Base from '../base'
 
-const Measure = ({ children, margin, marginTop }) => {
-  let classes = ['measure']
-  classes.push(scaleConversion('margin', margin))
-  classes.push(scaleConversion('marginTop', marginTop))
+const Measure = ({ ...props }) => {
 
   return (
-		<div className={classes.join(' ')}>
-      {children}
-    </div>
+		<Base className="measure" {...props} />
   )
 }
 
