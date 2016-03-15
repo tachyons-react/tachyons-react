@@ -13,7 +13,7 @@ npm install --save tachyons-react
 ## Usage
 
 ```javascript
-<Measure margin={4} paddingVertical={{ns: 2}} font={{s: 4, ns: 3, m: 2, l: 1}}>
+<Measure m={4} pv={{ns: 2}} f={{all: 4, ns: 3, m: 2, l: 1}}>
   <SomeOtherComponent {...props} />
 </Measure>
 ```
@@ -27,7 +27,7 @@ This reduces page bloat and avoids style duplication.
 
 ### Breakpoints
 
-- `default`: All breakpoints (unless otherwise specified)
+- `all`: All breakpoints (unless otherwise specified with another breakpoint)
 - `ns`: Not small
 - `m`: Medium
 - `l`: Large
@@ -36,13 +36,33 @@ This reduces page bloat and avoids style duplication.
 
 #### Padding
 
-- `padding`
-- `paddingTop`
-- `paddingLeft`
-- `paddingRight`
-- `paddingBottom`
-- `paddingVertical`
-- `paddingHorizontal`
+- `p`: Padding for top, left, right, bottom, and middle.
+- `pt`: Padding top.
+- `pl`: Padding left.
+- `pr`: Padding right.
+- `pb`: Padding bottom.
+- `pv`: Padding vertical (top and bottom).
+- `ph`: Padding horizontal (left and right).
+
+Values: `[0,1,2,3,4,5,6]`
+
+#### Margin
+
+- `m`: Margin for top, left, right, bottom, and middle.
+- `mt`: Margin top.
+- `ml`: Margin left.
+- `mr`: Margin right.
+- `mb`: Margin bottom.
+- `mv`: Margin vertical (top and bottom).
+- `mh`: Margin horizontal (left and right).
+
+Values: `[0,1,2,3,4,5,6]`
+
+#### Font Size
+
+- `f`: Font size, 1 is the largest on the scale, 6 the smallest.
+
+Values: `[1,2,3,4,5,6]`
 
 ## License
 

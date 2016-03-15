@@ -12,8 +12,8 @@ test.beforeEach(t => {
       'Hello',
       'World'
     ],
-    margin: 4,
-    marginTop: {
+    m: 4,
+    mt: {
       ns: 2,
       m: 4,
       l: 6
