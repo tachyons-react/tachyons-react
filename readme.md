@@ -2,7 +2,7 @@
 
 __Work in progress__
 
-Tachyons React components
+A 100% mobile-first, responsive, functional React component library using [Tachyons](http://tachyons.io).
 
 ## Installation
 
@@ -13,10 +13,36 @@ npm install --save tachyons-react
 ## Usage
 
 ```javascript
-var tachyonsReact = require('tachyons-react')
-
-tachyonsReact()  // => true
+<Measure margin={4} paddingVertical={{ns: 2}} font={{s: 4, ns: 3, m: 2, l: 1}}>
+  <SomeOtherComponent {...props} />
+</Measure>
 ```
+
+Apply styling to a component using an ergonomic and developer tested API using component properties.
+You can target particular breakpoints, or apply them to all.
+Rather than applying inline styles, these components use Tachyons CSS classes.
+They are intended to be immutable and do one thing well.
+Resulting components become a composition of classes based on the properties and values specified.
+This reduces page bloat and avoids style duplication.
+
+### Breakpoints
+
+- `default`: All breakpoints (unless otherwise specified)
+- `ns`: Not small
+- `m`: Medium
+- `l`: Large
+
+### Properties
+
+#### Padding
+
+- `padding`
+- `paddingTop`
+- `paddingLeft`
+- `paddingRight`
+- `paddingBottom`
+- `paddingVertical`
+- `paddingHorizontal`
 
 ## License
 
