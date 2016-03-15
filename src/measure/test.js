@@ -12,7 +12,12 @@ test.beforeEach(t => {
       'Hello',
       'World'
     ],
-    margin: 4
+    margin: 4,
+    marginTop: {
+      ns: 2,
+      m: 4,
+      l: 6
+    }
   })
 })
 
@@ -25,9 +30,11 @@ test('renders a measure div', t => {
 })
 
 test('applies margin', t => {
-  t.plan(1)
+  t.plan(2)
 
+  // TODO: Use get class names module
   t.true(t.context.component.includes('ma4'))
+  t.true(t.context.component.includes('mt2-ns'))
 })
 
 const renderStatic = (props) => {
