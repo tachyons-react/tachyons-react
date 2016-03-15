@@ -4,23 +4,20 @@ import sinon from 'sinon'
 import React from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
 
-import TitleText from './'
+import ProductCard from './'
 
-test('renders paragraphs', t => {
-  t.plan(1)
-
-  const output = renderStatic({
-    title: 'Hello, world!',
-    paragraphs: [
-      'Hello',
-      'World'
-    ]
+test.beforeEach(t => {
+  t.context.component = renderStatic({
+    title: 'Hello, world!'
   })
-
-  console.log(output)
-  t.true(output.includes('<p'))
 })
 
-function renderStatic (props) {
-  return renderToStaticMarkup(<TitleText {...props} />)
+test('renders product card', t => {
+  t.plan(1)
+
+  t.true(t.context.component.includes('Hello, world!'))
+})
+
+const renderStatic = (props) => {
+  return renderToStaticMarkup(<ProductCard {...props} />)
 }

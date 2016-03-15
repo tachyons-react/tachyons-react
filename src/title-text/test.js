@@ -7,7 +7,7 @@ import { renderToStaticMarkup } from 'react-dom/server'
 import TitleText from './'
 
 test('renders paragraphs', t => {
-  t.plan(1)
+  t.plan(2)
 
   const output = renderStatic({
     title: 'Hello, world!',
@@ -17,8 +17,8 @@ test('renders paragraphs', t => {
     ]
   })
 
-  console.log(output)
   t.true(output.includes('<p'))
+  t.true(output.includes('Hello'))
 })
 
 function renderStatic (props) {
