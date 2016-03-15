@@ -1,4 +1,4 @@
-# tachyons-react [![Build Status](https://secure.travis-ci.org/johnotander/tachyons-react.png?branch=master)](https://travis-ci.org/johnotander/tachyons-react) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+# tachyons-react [![Build Status](https://secure.travis-ci.org/tachyons-react/tachyons-react.png?branch=master)](https://travis-ci.org/tachyons-react/tachyons-react) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 __Work in progress__
 
