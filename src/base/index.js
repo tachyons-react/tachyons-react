@@ -4,12 +4,15 @@ import isPresent from 'is-present'
 import getClassesFromPropAndVal from '../../util/get-classes-from-prop-and-val'
 
 const Base = ({
-  className, children,
+  className, children, tagName,
 
   // 0 to 6 scale
   m, mt, ml, mr, mb, mv, mh,
   p, pt, pl, pr, pb, pv, ph,
-  f
+  f,
+  
+  // 0 to 100 scale
+  o
 }) => {
 
   const classes = [className]
@@ -31,11 +34,14 @@ const Base = ({
   if (isPresent(ph)) classes.push(getClassesFromPropAndVal('ph', ph))
 
   if (isPresent(f)) classes.push(getClassesFromPropAndVal('f', f))
+  if (isPresent(o)) classes.push(getClassesFromPropAndVal('o', o))
+
+  const Component = tagName || 'div'
 
   return (
-		<div className={classes.join(' ')}>
+		<Component className={classes.join(' ')}>
       {children}
-    </div>
+    </Component>
   )
 }
 

@@ -89,6 +89,12 @@ Values: `[0,1,2,3,4,5,6]`
 
 Values: `[1,2,3,4,5,6]`
 
+##### Opacity
+
+- `o`: Opacity for a component, in 10% increments.
+
+Values: `[10,20,30,40,50,60,70,80,90,100]`
+
 ## Related
 
 - <https://github.com/tachyons-css/tachyons>: CSS used for styling.

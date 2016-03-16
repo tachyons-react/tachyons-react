@@ -22,8 +22,11 @@ test.beforeEach(t => {
       all: 3,
       ns: 2,
       l: 1
-    }
+    },
+    o: 20
   })
+
+  console.log(t.context.component)
 })
 
 test('applies margin', t => {
@@ -37,9 +40,14 @@ test('applies margin', t => {
 test('applies fonts', t => {
   t.plan(2)
 
-  console.log(t.context.component)
   t.true(t.context.component.includes('f3'))
   t.true(t.context.component.includes('f2-ns'))
+})
+
+test('applies opacity', t => {
+  t.plan(1)
+
+  t.true(t.context.component.includes('o-20'))
 })
 
 const renderStatic = (props) => {
